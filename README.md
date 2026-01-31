@@ -31,7 +31,7 @@ CRUD の基本実装を学ぶためのシンプルなサンプルです
 ・リポジトリをクローン
 ```bash
 git clone https://github.com/myrmenaka/Laravel-crud-practice.git
-cd Laravel-crud-practice
+cd task-app
 ```
 
 ・依存パッケージのインストール
