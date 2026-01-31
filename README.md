@@ -75,27 +75,28 @@ php artisan migrate
 ## 8. Directory Structure
 
 ### Migrate  
-・database/migrations/0001_01_01_000002_create_jobs_table.php  
-・database/migrations/2026_01_31_060952_create_tasks_table.php
+・[database/migrations/2026_01_31_060952_create_tasks_table.php](./task-app/database/migrations/2026_01_31_060952_create_tasks_table.php)  
 
 ### Model  
-・app/Models/Task.php  
+・[app/Models/Task.php](./task-app/app/Models/Task.php)  
 
 ### Controller  
-・app/Http/Controllers/TaskController.php    
+・[app/Http/Controllers/TaskController.php](./task-app/app/Http/Controllers/TaskController.php)    
 
 ### Route  
-・routes/web.php  
+・[routes/web.php](./task-app/routes/web.php)  
 
 ### Views  
-・resources/views/index.blade.php    
-・resources/views/create.blade.php    
-・resources/views/edit.blade.php    
+・[resources/views/index.blade.php](./task-app/resources/views/index.blade.php)    
+・[resources/views/create.blade.php](./task-app/resources/views/create.blade.php)    
+・[resources/views/edit.blade.php](./task-app/resources/views/edit.blade.php)    
 
 ## 9. Validation Rules
 
 ・title: required, max:255  
 ・description: nullable, string  
+
+※ FormRequestに未分離
 
 ## 10. Purpose
  
