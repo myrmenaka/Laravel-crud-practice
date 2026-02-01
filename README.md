@@ -22,9 +22,9 @@ CRUD の基本実装を学ぶためのシンプルなサンプルです
 ・PHP 8.2.30  
 ・Laravel 12.44.0  
 ・SQLite  
-・Node.js v24.12.0
-・npm 11.6.2
-・vite
+・Node.js v24.12.0  
+・npm 11.6.2  
+・vite  
 
 ## 5. Installation
 
