@@ -1,109 +1,119 @@
 # LARAVEL-CRUD-APP
 
-[Demo Video(https://youtu.be/f4Vi5kJff5I)](https://youtu.be/f4Vi5kJff5I)  
+[Demo Video(2026-01-31)](https://youtu.be/f4Vi5kJff5I)  
+[Demo Video(2026-02-15)](https://youtu.be/FtNuGI3m3LU)  
 
-## 1. task-app
+
+## task-app
 簡易タスク管理アプリ
 
-## 2. Description
+## Description
 
-Laravel を使ったタスク管理アプリ  
-CRUD の基本実装を学ぶためのシンプルなサンプルです
+このアプリは、Laravel を使った CRUD（作成・読み取り・更新・削除）の学習用タスク管理アプリです。  
+タスクとカテゴリを管理でき、検索機能やカテゴリ別フィルタも備えています。
 
-## 3. Features
+## 機能一覧
 
-・タスク一覧表示  
-・新規作成  
-・編集  
-・削除  
+### タスク機能
+- タスクの新規作成 
+- タスクの編集 
+- タスクの削除 
+- タスク一覧表示 
+- キーワード検索 
+- カテゴリ別フィルタ 
+### カテゴリ機能 
+- カテゴリの新規作成 
+- カテゴリの編集 
+- カテゴリの削除 
+- カテゴリ一覧表示 
+- タスク作成・編集時にカテゴリを選択可能 
+- カテゴリ削除時、紐づくタスクの `category_id` は自動で `null`（未分類）に設定
 
-## 4. Tech Stack
+## 使用技術
 
 ・PHP 8.2.30  
 ・Laravel 12.44.0  
 ・SQLite  
 ・Node.js v24.12.0  
 ・npm 11.6.2  
-・vite  
+・vite（CSS/JS ビルド）  
+・Bootstrap 5
 
-## 5. Installation
+## セットアップ手順
 
-・リポジトリをクローン
+### リポジトリをクローン
 ```bash
 git clone https://github.com/myrmenaka/Laravel-crud-practice.git
 cd task-app
 ```
 
-・依存パッケージのインストール
+### PHP依存パッケージのインストール
 ```bash
 composer install
 ```
 
-・環境ファイルの作成
+### 環境ファイルの作成
 ```bash
  cp .env.example .env
 ```
 
-・アプリケーションキーの作成
+### アプリケーションキーの作成
 ```bash
 php artisan key:generate
 ```
 
-## 6. Database Setup
-
-・SQLiteファイルを作成
+### データベース設定（SQLiteファイルを作成）
 ```
 touch database/database.sqlite
 ```
 
-・`.env` をSQLite用に設定
+### `.env` をSQLite用に設定
 ```env
 DB_CONNECTION=sqlite
 DB_DATABASE=database/database.sqlite
 ```
 
-・マイグレーションを実行してテーブル作成
+### マイグレーションを実行してテーブル作成
 ```bash
 php artisan migrate
 ```
 
-## 7. Run the Application
-  
-・php artisan serve  
-・http://localhost:8000/tasks  
+## フロントエンド
+### 依存関係インストール
+```
+npm install
+```
+### 開発サーバー起動
+```
+npm run dev
+```
 
-## 8. Directory Structure
+## サーバー起動
+```
+php artisan serve  
+http://localhost:8000/tasks  
+```
 
-### Migrate  
-・[database/migrations/2026_01_31_060952_create_tasks_table.php](./task-app/database/migrations/2026_01_31_060952_create_tasks_table.php)  
+## 画面一覧
+・タスク一覧  
+・タスク作成  
+・タスク編集  
+・カテゴリ一覧  
+・カテゴリ作成  
+・カテゴリ編集  
 
-### Model  
-・[app/Models/Task.php](./task-app/app/Models/Task.php)  
+## 今後の拡張予定
+・タスクの並び替え  
+・API化  
+・認証機能（ログイン）
 
-### Controller  
-・[app/Http/Controllers/TaskController.php](./task-app/app/Http/Controllers/TaskController.php)    
-
-### Route  
-・[routes/web.php](./task-app/routes/web.php)  
-
-### Views  
-・[resources/views/index.blade.php](./task-app/resources/views/index.blade.php)    
-・[resources/views/create.blade.php](./task-app/resources/views/create.blade.php)    
-・[resources/views/edit.blade.php](./task-app/resources/views/edit.blade.php)    
-
-## 9. Validation Rules
-
-・title: required, max:255  
-・description: nullable, string  
-
-※ FormRequestに未分離
-
-## 10. Purpose
- 
-・Laravel CRUD の基礎理解  
-
-## 11. License
-MIT
+## 目的
+Laravel の基本的な CRUD 処理、
+バリデーション、
+FormRequest の分離、
+Vite の利用、
+外部キー制約の理解
+などを実践的に学ぶためのプロジェクト
 
 ---
 ---
