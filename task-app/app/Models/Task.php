@@ -10,4 +10,9 @@ class Task extends Model
         'title',
         'description',
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
