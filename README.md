@@ -3,6 +3,7 @@
 [Demo Video(2026-01-31)](https://youtu.be/f4Vi5kJff5I)  
 [Demo Video(2026-02-15)](https://youtu.be/FtNuGI3m3LU)  
 
+## [更新ログ](./CHANGELOG.md)  
 
 ## task-app
 簡易タスク管理アプリ
