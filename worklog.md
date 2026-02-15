@@ -163,8 +163,9 @@ php artisan make:request TaskRequest
 - `index.blade.php` : 検索フォーム追加 + カテゴリ表示  
 - `create.blade.php` : カテゴリ選択 + 新規カテゴリ作成  
 - `edit.blade.php` : カテゴリ編集  
-
-
+- レイアウト作成（layouts/app.blade.php）  
+- CSS追加  
+- CDNでbootstrap導入  
 
 
 

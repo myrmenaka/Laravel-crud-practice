@@ -1,9 +1,12 @@
-<h1>タスク編集</h1>
+@extends('layouts.app')
 
-{{-- バリデーションエラー表示 --}}
+@section('content')
+<h2 class="mb-4">タスク編集</h2>
+
+{{-- エラー表示 --}}
 @if ($errors->any())
-    <div style="color: red;">
-        <ul>
+    <div class="alert alert-danger">
+        <ul class="mb-0">
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
             @endforeach
@@ -11,31 +14,43 @@
     </div>
 @endif
 
-<form action="{{ route('tasks.update', $task) }}" method="POST">
-    @csrf
-    @method('PUT')
+<div class="card p-4 shadow-sm">
+    <form action="{{ route('tasks.update', $task) }}" method="POST">
+        @csrf
+        @method('PUT')
 
-    <div>
-        <label>タイトル</label><br>
-        <input type="text" name="title" value="{{ old('title', $task->title) }}">
-    </div>
+        <div class="mb-3">
+            <label class="form-label">タイトル</label>
+            <input type="text" name="title" class="form-control"
+                   value="{{ old('title', $task->title) }}">
+        </div>
 
-    <div>
-        <label>詳細</label><br>
-        <textarea name="description">{{ old('description', $task->description) }}</textarea>
-    </div>
+        <div class="mb-3">
+            <label class="form-label">説明</label>
+            <textarea name="description" class="form-control">{{ old('description', $task->description) }}</textarea>
+        </div>
 
-    <button type="submit">更新</button>
-</form>
+        <div class="mb-3">
+            <label class="form-label">カテゴリ</label>
+            <select name="category_id" class="form-select">
+                <option value="">選択してください</option>
+                @foreach ($categories as $category)
+                    <option value="{{ $category->id }}"
+                        {{ old('category_id', $task->category_id) == $category->id ? 'selected' : '' }}>
+                        {{ $category->name }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
 
-<hr>
+        <div class="mb-3">
+            <label class="form-label">新規カテゴリ</label>
+            <input type="text" name="new_category" class="form-control"
+                   value="{{ old('new_category') }}">
+        </div>
 
-{{-- 削除フォーム --}}
-<form action="{{ route('tasks.destroy', $task) }}" method="POST">
-    @csrf
-    @method('DELETE')
-    <button type="submit" onclick="return confirm('本当に削除しますか？')">削除</button>
-</form>
+        <button type="submit" class="btn btn-pink w-100">更新</button>
+    </form>
+</div>
 
-<br>
-<a href="{{ route('tasks.index') }}">タスク一覧に戻る</a>
+@endsection

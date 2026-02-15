@@ -1,0 +1,126 @@
+/* 全体の雰囲気 */
+body {
+    font-family: "Hiragino Sans", "Yu Gothic", sans-serif;
+    background: #fff7fa; /* 桜の花びらみたいな淡いピンク */
+    margin: 0;
+    padding: 20px;
+    color: #444;
+}
+
+/* ヘッダー */
+header {
+    background: #ffe3ee; /* もう少し濃い桜色 */
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(255, 182, 193, 0.4);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    color: #d45a8b; /* 桜の濃い部分のようなピンク */
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #d45a8b;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ボタン */
+button {
+    background: #f8b6cc;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(255, 182, 193, 0.4);
+}
+
+button:hover {
+    background: #f29bb9;
+}
+
+/* 入力フォーム */
+input[type="text"],
+textarea,
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #f3b6c8;
+    border-radius: 6px;
+    background: #fff;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(255, 182, 193, 0.3);
+}
+
+textarea {
+    height: 100px;
+}
+
+/* テーブル */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(255, 182, 193, 0.4);
+}
+
+th {
+    background: #ffd6e6;
+    padding: 10px;
+    color: #d45a8b;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ffe3ee;
+}
+
+tr:hover {
+    background: #fff0f6;
+}
+
+/* 成功メッセージ */
+.success {
+    background: #ffe3ee;
+    padding: 10px;
+    border-left: 5px solid #f29bb9;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+/* Bootstrap カスタムカラー（桜色） */
+.btn-pink {
+    background-color: #f8b6cc;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+}
+
+.btn-pink:hover {
+    background-color: #f29bb9;
+    color: white;
+}
+
+.btn-outline-pink {
+    border: 2px solid #f8b6cc;
+    color: #d45a8b;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.btn-outline-pink:hover {
+    background-color: #f8b6cc;
+    color: white;
+}
