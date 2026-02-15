@@ -136,7 +136,7 @@ onDelete('set null') → 親削除時子は残して、外部キーのみNULL
 ```
 php artisan migrate
 ```
-## ■ Taskモデルにリレーション追加
+## ■ Taskモデルに外部キー追加とリレーション追加
 ```
 public function category()
 {
@@ -167,8 +167,27 @@ php artisan make:request TaskRequest
 - CSS追加  
 - CDNでbootstrap導入  
 
+## ■ カテゴリ単体の削除機能追加
+- CategoryController作成
+```
+php artisan make:controller CategoryController --resource
+```
+- FormRequest作成
+```
+php artisan make:request CategoryRequest
+```
+- コントローラーの処理追加  
+    index、create、store、update、edit、destroy
 
+- ルーティング追加
+```
+Route::resource('categories', CategoryController::class);
+```
 
+- Blade作成（categories/）
+    index、create、edit  
+- レイアウトにカテゴリ管理ページリンク追加  
+- 
 
 
 

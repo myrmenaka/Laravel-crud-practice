@@ -44,7 +44,7 @@ class TaskController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('create', compact('categories'));
+        return view('tasks.create', compact('categories'));
     }
 
     /**
@@ -87,7 +87,7 @@ class TaskController extends Controller
     public function edit(Task $task)
     {
         $categories = Category::all();
-        return view('edit', compact('task', 'categories'));
+        return view('tasks.edit', compact('task', 'categories'));
     }
 
     /**

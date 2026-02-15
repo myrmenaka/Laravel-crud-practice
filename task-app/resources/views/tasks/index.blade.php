@@ -62,7 +62,8 @@
                         <form action="{{ route('tasks.destroy', $task) }}" method="POST" class="d-inline">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-pink btn-sm">削除</button>
+                            <button class="btn btn-pink btn-sm"
+                            onclick="return confirm('本当に削除しますか？')">削除</button>
                         </form>
                     </td>
                 </tr>
